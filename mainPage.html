@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Styling -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/mainPage.css">
+
+        <title> World Cup Expo </title> 
+    </head>
+    <body> 
+        <div class="container py-5">
+            <header class="text-center">
+                <h1 class="display-4 mb-4">World Cup Countdown</h1>
+            </header>
+            <div class="py-5">
+                <div class="row">
+                    <div class="col-lg-8 m-auto">
+                        <div class="rounded bg-gradient-4 text-white shadow p-5 text-center mb-5">
+                            <p class="mb-0 font-weight-bold text-uppercase">Let's get ready for the worlds most beautiful tournament!!</p>
+                            <div id="clock-c" class="countdown py-4" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Country </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Action</button>
+                    <button class="dropdown-item" type="button">Another Action</button>
+                    <button class="dropdown-item" type="button">Something else</button>
+                </div>
+            </div>
+        </div> 
+        <!-- JQuery -->
+        <script src="js/jquery.js"></script> 
+        <script src="js/jquery.countdown.js"></script>   
+        <script src="js/mainPage.js"></script> 
+    </body>
+</html>
