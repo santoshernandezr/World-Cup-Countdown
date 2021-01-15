@@ -5,3 +5,25 @@ $('#clock-c').countdown("2022/11/21", function(event) {
     + '<span class="h1 font-weight-bold">%M</span> Min'
     + '<span class="h1 font-weight-bold">%S</span> Sec'));
 });
+
+const url = 'https://restcountries.eu/rest/v2';
+
+let dropdown = $('#locality-dropdown');
+
+dropdown.empty();
+
+dropdown.append('<option selected="true" disabled>Choose your Country</option>');
+dropdown.prop('selectedIndex', 0);
+
+
+// Populate dropdown with list of provinces
+$.getJSON(url, function (data) {
+  $.each(data, function (key, entry) {
+    dropdown.append($('<option></option>').attr('value', entry.alpha3Code).text(entry.name));
+  })
+});
+
+$('#locality-dopdown').change(function() {
+    var value = $(this).val();
+    alert(value);
+});

@@ -73,23 +73,8 @@ body {
     border-radius: 1rem !important;
 }
 
-.btn-demo {
-    padding: 0.5rem 2rem !important;
-    border-radius: 30rem !important;
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold !important;
+#locality-dropdown {
+    display: block;
+    margin: 0 auto;
 }
 
-.btn-demo:hover, .btn-demo:focus {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.dropdown {
-    left: 50% !important;
-    right: auto !important;
-    text-align: center !important;
-    transform: translate(-50%, 0) !important;
-}
