@@ -43,6 +43,7 @@
 */
 body {
     min-height: 100vh;
+    background: #41d9ff8a;
 }
 
 .bg-gradient-1 {

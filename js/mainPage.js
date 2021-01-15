@@ -23,7 +23,7 @@ $.getJSON(url, function (data) {
   })
 });
 
-$('#locality-dopdown').change(function() {
-    var value = $(this).val();
-    alert(value);
+document.querySelector('#locality-dropdown').addEventListener("change", function(e) {
+    document.body.style.background = 'url(https://restcountries.eu/data/'+ this.value.toLowerCase() + '.svg)';
+    console.log("I have been changed", this.value.toLowerCase());
 });
