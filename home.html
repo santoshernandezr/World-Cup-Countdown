@@ -7,15 +7,32 @@
 
         <!-- Styling -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/mainPage.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
 
         <title> World Cup Expo </title> 
     </head>
     <body> 
-        <div id="a" class="container py-5">
+        <div class="container py-5">
+            <!-- Menu -->
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="WorldCup2014.html">Brazil 2014</a></li>
+                    <li><a class="dropdown-item" href="WorldCup2014.html">Russia 2018</a></li>
+                  </ul>
+                </li>
+            </ul>
+
+            <!-- Header with the world cups -->
             <header class="text-center">
                 <h1 class="display-4 mb-4">Qatar 2022 Countdown</h1>
             </header>
+
+            <!-- Countdown Timer -->
             <div class="py-5">
                 <div class="row">
                     <div class="col-lg-8 m-auto">
@@ -26,13 +43,16 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Dropdown Menu with the countries -->
             <select id="locality-dropdown" name="locality">
                 <optio></option>
             </select>
         </div> 
         <!-- JQuery -->
         <script src="js/jquery.js"></script> 
+        <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.countdown.js"></script>   
-        <script src="js/mainPage.js"></script> 
+        <script src="js/home.js"></script> 
     </body>
 </html>

@@ -1,0 +1,31 @@
+body {
+    min-height: 100vh;
+    background: #41d9ff8a;
+}
+
+.nav-pills>li.active>a{
+    background-color: #3390ce !important;
+   }
+
+.nav-pills>li.active {
+    position: absolute;
+    left: 83%;
+}
+
+.container1 {
+    text-align: center;
+}
+
+.logo-image{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 15px;
+    align-content: center;
+  }

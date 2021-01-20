@@ -79,3 +79,11 @@ body {
     margin: 0 auto;
 }
 
+.nav-pills>li.active>a{
+    background-color: #3390ce !important;
+   }
+
+.nav-pills>li.active {
+    position: absolute;
+    left: 83%;
+}
