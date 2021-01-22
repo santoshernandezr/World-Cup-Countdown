@@ -18,7 +18,7 @@ body {
 
 .logo-image{
     width: 60px;
-    height: 60px;
+    height: 100px;
     overflow: hidden;
     margin-top: -6px;
 }
@@ -42,7 +42,7 @@ body {
 
 #winnerFlag {
     width: 60px;
-    height: 60px;
+    height: 40px;
 
 }
 

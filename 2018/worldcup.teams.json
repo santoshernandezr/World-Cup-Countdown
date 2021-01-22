@@ -1,6 +1,4 @@
-{
-  "name": "World Cup 2018",
-  "teams": [
+[
     {
       "name": "Egypt",
       "code": "EGY",
@@ -410,4 +408,3 @@
       }
     }
   ]
-}

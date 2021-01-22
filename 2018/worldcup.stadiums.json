@@ -1,6 +1,4 @@
-{
-  "name": "World Cup 2018",
-  "stadiums": [
+[
     {
       "key": "samara",
       "name": "Samara Arena",
@@ -86,4 +84,3 @@
       "timezone": "UTC+3"
     }
   ]
-}

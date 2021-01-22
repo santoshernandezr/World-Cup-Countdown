@@ -1,6 +1,6 @@
-const url1 = '2014/worldcup.teams.json';
-const url2 = '2014/worldcup.groups.json';
-const url3 = '2014/worldcup.stadiums.json';
+const url1 = '2018/worldcup.teams.json';
+const url2 = '2018/worldcup.groups.json';
+const url3 = '2018/worldcup.stadiums.json';
 
 var africa = [];
 var asia = [];
@@ -94,6 +94,7 @@ $.getJSON(url2, function (data) {
     })
 
     var groups = [a, b, c, d, e, f, g, h];
+    console.log("This is groups: ", groups)
 
     while (groupA.length != 0 || groupB.length != 0 || groupC.length != 0 || groupD.length != 0 || groupE.length != 0 || groupF.length != 0 || groupG.length != 0 || groupH.length != 0) {
         var tbodyRef = document.getElementById('groupTable').getElementsByTagName('tbody')[0];
@@ -110,7 +111,7 @@ $.getJSON(url3, function (data) {
         grid.append($('<h4></h4>').text(data[i]["name"]));
         grid.append('<img src="pictures/stadiums/' + data[i]["key"] + '.jpg" class="img-fluid">');
         grid.append('<p><strong>Capacity: </strong>' + data[i]["capacity"]);
-        grid.append('<p><strong>Location: </strong>' + data[i]["city"] + ', Brazil');
+        grid.append('<p><strong>Location: </strong>' + data[i]["city"] + ', Russia');
     }
 
 });
