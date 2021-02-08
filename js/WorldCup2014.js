@@ -17,8 +17,15 @@ function makeCells(array, newRoww) {
         if (item.length == 0) {
             var newText = document.createTextNode(" ");
         } else {
+            console.log("country: ", item[0], "code: ", item[1].toLowerCase())
             var newText = document.createTextNode(item[0]);
-            newCell.appendChild(newText)
+            var img = document.createElement('img');
+            img.setAttribute("id", "countryFlag");
+            var country = item[1].toLowerCase();
+            img.src = 'https://restcountries.eu/data/' + country + '.svg';
+            newCell.appendChild(newText);
+            newCell.appendChild(img);
+            item.shift();
             item.shift();
         }
     });
@@ -28,23 +35,32 @@ $.getJSON(url1, function (data) {
     $.each(data, function(key, entry) {
         if (entry.continent == "Africa") {
             africa.push(entry.name)
+            africa.push(entry.code)
         } else if (entry.continent == "Asia") {
             asia.push(entry.name)
+            asia.push(entry.code)
         } else if (entry.continent == "Central America") {
             centAmerica.push(entry.name)
+            centAmerica.push(entry.code)
         } else if (entry.continent == "Europe") {
             europe.push(entry.name)
+            europe.push(entry.code)
         } else if (entry.continent == "Middle East") {
             midEast.push(entry.name)
+            midEast.push(entry.code)
         } else if (entry.continent == "North America") {
             norAmerica.push(entry.name)
+            norAmerica.push(entry.code)
         } else if (entry.continent == "Pacific") {
             pac.push(entry.name)
+            pac.push(entry.code)
         } else if (entry.continent == "South America") {
             souAmerica.push(entry.name)
+            souAmerica.push(entry.code)
         }
     })
     var teams = [africa, asia, centAmerica, europe, midEast, norAmerica, pac, souAmerica];
+    console.log(teams)
 
     while (africa.length != 0 || asia.length != 0 || centAmerica.length != 0 || europe.length != 0 || midEast.length != 0 || norAmerica.length != 0 || pac.length != 0 || souAmerica.length != 0) {
         var tbodyRef = document.getElementById('teamTable').getElementsByTagName('tbody')[0];
@@ -68,6 +84,7 @@ var groupJ = [];
 function getTeams(group, teams) {
     teams.forEach(function (item, index) {
         group.push(item["name"]);
+        group.push(item["code"]);
     });
     return group;
 }
@@ -94,6 +111,7 @@ $.getJSON(url2, function (data) {
     })
 
     var groups = [a, b, c, d, e, f, g, h];
+    console.log("Groups: ", groups)
 
     while (groupA.length != 0 || groupB.length != 0 || groupC.length != 0 || groupD.length != 0 || groupE.length != 0 || groupF.length != 0 || groupG.length != 0 || groupH.length != 0) {
         var tbodyRef = document.getElementById('groupTable').getElementsByTagName('tbody')[0];

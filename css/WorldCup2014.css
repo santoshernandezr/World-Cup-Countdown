@@ -50,3 +50,10 @@ body {
     width: auto;
     height: auto;    
 }
+
+#countryFlag {
+    float: right;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}

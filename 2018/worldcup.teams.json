@@ -92,7 +92,7 @@
     },
     {
       "name": "Costa Rica",
-      "code": "CRC",
+      "code": "CRI",
       "continent": "Central America",
       "assoc": {
         "key": "crc",
@@ -131,7 +131,7 @@
     },
     {
       "name": "Germany",
-      "code": "GER",
+      "code": "DEU",
       "continent": "Europe",
       "assoc": {
         "key": "ger",
@@ -170,7 +170,7 @@
     },
     {
       "name": "Portugal",
-      "code": "POR",
+      "code": "PRT",
       "continent": "Europe",
       "assoc": {
         "key": "por",
@@ -183,7 +183,7 @@
     },
     {
       "name": "Denmark",
-      "code": "DEN",
+      "code": "DNK",
       "continent": "Europe",
       "assoc": {
         "key": "den",
@@ -222,7 +222,7 @@
     },
     {
       "name": "Switzerland",
-      "code": "SUI",
+      "code": "CHE",
       "continent": "Europe",
       "assoc": {
         "key": "sui",
@@ -235,7 +235,7 @@
     },
     {
       "name": "Croatia",
-      "code": "CRO",
+      "code": "HRV",
       "continent": "Europe",
       "assoc": {
         "key": "cro",
@@ -287,7 +287,7 @@
     },
     {
       "name": "England",
-      "code": "ENG",
+      "code": "GBR",
       "continent": "Europe"
     },
     {
@@ -305,7 +305,7 @@
     },
     {
       "name": "Saudi Arabia",
-      "code": "KSA",
+      "code": "SAU",
       "continent": "Middle East",
       "assoc": {
         "key": "ksa",
@@ -370,7 +370,7 @@
     },
     {
       "name": "Uruguay",
-      "code": "URU",
+      "code": "URY",
       "continent": "South America",
       "assoc": {
         "key": "uru",

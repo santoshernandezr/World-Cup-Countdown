@@ -8,7 +8,7 @@
       },
       {
         "name": "Croatia",
-        "code": "CRO"
+        "code": "HRV"
       },
       {
         "name": "Mexico",
@@ -29,7 +29,7 @@
       },
       {
         "name": "Netherlands",
-        "code": "NED"
+        "code": "NLD"
       },
       {
         "name": "Australia",
@@ -37,7 +37,7 @@
       },
       {
         "name": "Chile",
-        "code": "CHI"
+        "code": "CHL"
       }
     ]
   },
@@ -54,7 +54,7 @@
       },
       {
         "name": "Greece",
-        "code": "GRE"
+        "code": "GRC"
       },
       {
         "name": "Colombia",
@@ -67,7 +67,7 @@
     "teams": [
       {
         "name": "Costa Rica",
-        "code": "CRC"
+        "code": "CRI"
       },
       {
         "name": "Italy",
@@ -75,11 +75,11 @@
       },
       {
         "name": "England",
-        "code": "ENG"
+        "code": "GBR"
       },
       {
         "name": "Uruguay",
-        "code": "URU"
+        "code": "URY"
       }
     ]
   },
@@ -88,7 +88,7 @@
     "teams": [
       {
         "name": "Honduras",
-        "code": "HON"
+        "code": "HND"
       },
       {
         "name": "France",
@@ -96,7 +96,7 @@
       },
       {
         "name": "Switzerland",
-        "code": "SUI"
+        "code": "CHE"
       },
       {
         "name": "Ecuador",
@@ -134,11 +134,11 @@
       },
       {
         "name": "Germany",
-        "code": "GER"
+        "code": "DEU"
       },
       {
         "name": "Portugal",
-        "code": "POR"
+        "code": "PRT"
       },
       {
         "name": "United States",
@@ -151,7 +151,7 @@
     "teams": [
       {
         "name": "Algeria",
-        "code": "ALG"
+        "code": "DZA"
       },
       {
         "name": "South Korea",

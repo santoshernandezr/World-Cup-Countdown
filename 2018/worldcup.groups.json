@@ -12,11 +12,11 @@
         },
         {
           "name": "Saudi Arabia",
-          "code": "KSA"
+          "code": "SAU"
         },
         {
           "name": "Uruguay",
-          "code": "URU"
+          "code": "URY"
         }
       ]
     },
@@ -33,7 +33,7 @@
         },
         {
           "name": "Portugal",
-          "code": "POR"
+          "code": "PRT"
         },
         {
           "name": "Iran",
@@ -50,7 +50,7 @@
         },
         {
           "name": "Denmark",
-          "code": "DEN"
+          "code": "DNK"
         },
         {
           "name": "Australia",
@@ -71,7 +71,7 @@
         },
         {
           "name": "Croatia",
-          "code": "CRO"
+          "code": "HRV"
         },
         {
           "name": "Iceland",
@@ -88,11 +88,11 @@
       "teams": [
         {
           "name": "Costa Rica",
-          "code": "CRC"
+          "code": "CRI"
         },
         {
           "name": "Switzerland",
-          "code": "SUI"
+          "code": "CHE"
         },
         {
           "name": "Serbia",
@@ -113,7 +113,7 @@
         },
         {
           "name": "Germany",
-          "code": "GER"
+          "code": "DEU"
         },
         {
           "name": "Sweden",
@@ -142,7 +142,7 @@
         },
         {
           "name": "England",
-          "code": "ENG"
+          "code": "GBR"
         }
       ]
     },
