@@ -37,7 +37,6 @@ function makeCells(array, newRoww) {
             var img = document.createElement('img');
             img.setAttribute("id", "countryFlag");
             var country = item[1].toLowerCase();
-            console.log("This is country " + country)
             img.src = 'https://flagcdn.com/' + country + '.svg';
             newCell.appendChild(newText);
             newCell.appendChild(img);
@@ -124,7 +123,7 @@ $.getJSON(teams, function (data) {
  */
 $.getJSON(groups, function (data) {
     $.each(data, function(key, entry) {
-        if (entry.name == "Group A") {
+        if (entry.name == "Group A") {      
             makeGroup(groupA, entry.teams)
         } else if (entry.name == "Group B") {
             makeGroup(groupB, entry.teams)
@@ -144,7 +143,6 @@ $.getJSON(groups, function (data) {
     })
 
     var groups = [groupA, groupB, groupC, groupD, groupE, groupF, groupG, groupH];
-    console.log("This is groups:" + groups)
     makeTable(groups, 'groupTable', 'tbody');
 });
 

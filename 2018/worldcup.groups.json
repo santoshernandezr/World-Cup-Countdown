@@ -4,19 +4,19 @@
       "teams": [
         {
           "name": "Egypt",
-          "code": "EGY"
+          "code": "EG"
         },
         {
           "name": "Russia",
-          "code": "RUS"
+          "code": "RU"
         },
         {
           "name": "Saudi Arabia",
-          "code": "SAU"
+          "code": "SA"
         },
         {
           "name": "Uruguay",
-          "code": "URY"
+          "code": "UY"
         }
       ]
     },
@@ -25,19 +25,19 @@
       "teams": [
         {
           "name": "Morocco",
-          "code": "MAR"
+          "code": "MA"
         },
         {
           "name": "Spain",
-          "code": "ESP"
+          "code": "ES"
         },
         {
           "name": "Portugal",
-          "code": "PRT"
+          "code": "PT"
         },
         {
           "name": "Iran",
-          "code": "IRN"
+          "code": "IR"
         }
       ]
     },
@@ -46,19 +46,19 @@
       "teams": [
         {
           "name": "France",
-          "code": "FRA"
+          "code": "FR"
         },
         {
           "name": "Denmark",
-          "code": "DNK"
+          "code": "DK"
         },
         {
           "name": "Australia",
-          "code": "AUS"
+          "code": "AU"
         },
         {
           "name": "Peru",
-          "code": "PER"
+          "code": "PE"
         }
       ]
     },
@@ -67,19 +67,19 @@
       "teams": [
         {
           "name": "Nigeria",
-          "code": "NGA"
+          "code": "NG"
         },
         {
           "name": "Croatia",
-          "code": "HRV"
+          "code": "HR"
         },
         {
           "name": "Iceland",
-          "code": "ISL"
+          "code": "IS"
         },
         {
           "name": "Argentina",
-          "code": "ARG"
+          "code": "AR"
         }
       ]
     },
@@ -88,19 +88,19 @@
       "teams": [
         {
           "name": "Costa Rica",
-          "code": "CRI"
+          "code": "CR"
         },
         {
           "name": "Switzerland",
-          "code": "CHE"
+          "code": "CH"
         },
         {
           "name": "Serbia",
-          "code": "SRB"
+          "code": "RS"
         },
         {
           "name": "Brazil",
-          "code": "BRA"
+          "code": "BR"
         }
       ]
     },
@@ -109,19 +109,19 @@
       "teams": [
         {
           "name": "South Korea",
-          "code": "KOR"
+          "code": "KR"
         },
         {
           "name": "Germany",
-          "code": "DEU"
+          "code": "DE"
         },
         {
           "name": "Sweden",
-          "code": "SWE"
+          "code": "SE"
         },
         {
           "name": "Mexico",
-          "code": "MEX"
+          "code": "MX"
         }
       ]
     },
@@ -130,19 +130,19 @@
       "teams": [
         {
           "name": "Tunisia",
-          "code": "TUN"
+          "code": "TN"
         },
         {
           "name": "Panama",
-          "code": "PAN"
+          "code": "PA"
         },
         {
           "name": "Belgium",
-          "code": "BEL"
+          "code": "BE"
         },
         {
           "name": "England",
-          "code": "GBR"
+          "code": "GB"
         }
       ]
     },
@@ -151,19 +151,19 @@
       "teams": [
         {
           "name": "Senegal",
-          "code": "SEN"
+          "code": "SN"
         },
         {
           "name": "Japan",
-          "code": "JPN"
+          "code": "JP"
         },
         {
           "name": "Poland",
-          "code": "POL"
+          "code": "PL"
         },
         {
           "name": "Colombia",
-          "code": "COL"
+          "code": "CO"
         }
       ]
     }
