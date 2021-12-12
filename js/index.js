@@ -42,7 +42,7 @@ $.getJSON(url, function (data) {
 });
 
 /**
- * Function gets the tages which have the id #locality-dropdown and adds an event listener. The even listener
+ * Function gets the tags which have the id #locality-dropdown and adds an event listener. The even listener
  * is for the background to change when it is clicked. When the dropdown is clicked the background will change
  * to the country that was clicked. 
  */

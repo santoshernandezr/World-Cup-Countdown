@@ -4,12 +4,12 @@ const url3 = '2018/worldcup.stadiums.json';
 
 var africa = [];
 var asia = [];
-var centAmerica = [];
+var centralAmerica = [];
 var europe = [];
-var midEast = [];
-var norAmerica = [];
+var middleEast = [];
+var northAmerica = [];
 var pac = [];
-var souAmerica = [];
+var southAmerica = [];
 
 function makeCells(array, newRoww) {
     array.forEach(function (item, index) {
@@ -40,28 +40,28 @@ $.getJSON(url1, function (data) {
             asia.push(entry.name)
             asia.push(entry.code)
         } else if (entry.continent == "Central America") {
-            centAmerica.push(entry.name)
-            centAmerica.push(entry.code)
+            centralAmerica.push(entry.name)
+            centralAmerica.push(entry.code)
         } else if (entry.continent == "Europe") {
             europe.push(entry.name)
             europe.push(entry.code)
         } else if (entry.continent == "Middle East") {
-            midEast.push(entry.name)
-            midEast.push(entry.code)
+            middleEast.push(entry.name)
+            middleEast.push(entry.code)
         } else if (entry.continent == "North America") {
-            norAmerica.push(entry.name)
-            norAmerica.push(entry.code)
+            northAmerica.push(entry.name)
+            northAmerica.push(entry.code)
         } else if (entry.continent == "Pacific") {
             pac.push(entry.name)
             pac.push(entry.code)
         } else if (entry.continent == "South America") {
-            souAmerica.push(entry.name)
-            souAmerica.push(entry.code)
+            southAmerica.push(entry.name)
+            southAmerica.push(entry.code)
         }
     })
-    var teams = [africa, asia, centAmerica, europe, midEast, norAmerica, pac, souAmerica];
+    var teams = [africa, asia, centralAmerica, europe, middleEast, northAmerica, pac, southAmerica];
 
-    while (africa.length != 0 || asia.length != 0 || centAmerica.length != 0 || europe.length != 0 || midEast.length != 0 || norAmerica.length != 0 || pac.length != 0 || souAmerica.length != 0) {
+    while (africa.length != 0 || asia.length != 0 || centralAmerica.length != 0 || europe.length != 0 || middleEast.length != 0 || northAmerica.length != 0 || pac.length != 0 || southAmerica.length != 0) {
         var tbodyRef = document.getElementById('teamTable').getElementsByTagName('tbody')[0];
         var newRow = tbodyRef.insertRow(); 
 
@@ -80,7 +80,7 @@ var groupH = [];
 var groupI = [];
 var groupJ = [];
 
-function getTeams(group, teams) {
+function insertToList(group, teams) {
     teams.forEach(function (item, index) {
         group.push(item["name"]);
         group.push(item["code"]);
@@ -91,21 +91,21 @@ function getTeams(group, teams) {
 $.getJSON(url2, function (data) {
     $.each(data, function(key, entry) {
         if (entry.name == "Group A") {
-            a = getTeams(groupA, entry.teams)
+            a = insertToList(groupA, entry.teams)
         } else if (entry.name == "Group B") {
-            b = getTeams(groupB, entry.teams)
+            b = insertToList(groupB, entry.teams)
         } else if (entry.name == "Group C") {
-            c = getTeams(groupC, entry.teams)
+            c = insertToList(groupC, entry.teams)
         } else if (entry.name == "Group D") {
-            d = getTeams(groupD, entry.teams)
+            d = insertToList(groupD, entry.teams)
         } else if (entry.name == "Group E") {
-            e = getTeams(groupE, entry.teams)
+            e = insertToList(groupE, entry.teams)
         } else if (entry.name == "Group F") {
-            f = getTeams(groupF, entry.teams)
+            f = insertToList(groupF, entry.teams)
         } else if (entry.name == "Group G") {
-            g = getTeams(groupG, entry.teams)
+            g = insertToList(groupG, entry.teams)
         } else if (entry.name == "Group H") {
-            h = getTeams(groupH, entry.teams)
+            h = insertToList(groupH, entry.teams)
         } 
     })
 

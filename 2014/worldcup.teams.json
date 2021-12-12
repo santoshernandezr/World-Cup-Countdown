@@ -1,7 +1,7 @@
 [
   {
     "name": "Algeria",
-    "code": "DZA",
+    "code": "DZ",
     "continent": "Africa",
     "assoc": {
       "key": "alg",
@@ -14,7 +14,7 @@
   },
   {
     "name": "Côte d'Ivoire",
-    "code": "CIV",
+    "code": "CI",
     "continent": "Africa",
     "assoc": {
       "key": "civ",
@@ -27,7 +27,7 @@
   },
   {
     "name": "Ghana",
-    "code": "GHA",
+    "code": "GH",
     "continent": "Africa",
     "assoc": {
       "key": "gha",
@@ -40,7 +40,7 @@
   },
   {
     "name": "Nigeria",
-    "code": "NGA",
+    "code": "NG",
     "continent": "Africa",
     "assoc": {
       "key": "nga",
@@ -53,7 +53,7 @@
   },
   {
     "name": "Cameroon",
-    "code": "CMR",
+    "code": "CM",
     "continent": "Africa",
     "assoc": {
       "key": "cmr",
@@ -66,7 +66,7 @@
   },
   {
     "name": "Japan",
-    "code": "JPN",
+    "code": "JP",
     "continent": "Asia",
     "assoc": {
       "key": "jpn",
@@ -79,7 +79,7 @@
   },
   {
     "name": "South Korea",
-    "code": "KOR",
+    "code": "KR",
     "continent": "Asia",
     "assoc": {
       "key": "kor",
@@ -92,7 +92,7 @@
   },
   {
     "name": "Honduras",
-    "code": "HND",
+    "code": "HN",
     "continent": "Central America",
     "assoc": {
       "key": "hon",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Costa Rica",
-    "code": "CRI",
+    "code": "CR",
     "continent": "Central America",
     "assoc": {
       "key": "crc",
@@ -118,7 +118,7 @@
   },
   {
     "name": "Belgium",
-    "code": "BEL",
+    "code": "BE",
     "continent": "Europe",
     "assoc": {
       "key": "bel",
@@ -131,7 +131,7 @@
   },
   {
     "name": "Germany",
-    "code": "DEU",
+    "code": "DE",
     "continent": "Europe",
     "assoc": {
       "key": "ger",
@@ -144,7 +144,7 @@
   },
   {
     "name": "Spain",
-    "code": "ESP",
+    "code": "ES",
     "continent": "Europe",
     "assoc": {
       "key": "esp",
@@ -157,7 +157,7 @@
   },
   {
     "name": "France",
-    "code": "FRA",
+    "code": "FR",
     "continent": "Europe",
     "assoc": {
       "key": "fra",
@@ -170,7 +170,7 @@
   },
   {
     "name": "Greece",
-    "code": "GRC",
+    "code": "GR",
     "continent": "Europe",
     "assoc": {
       "key": "gre",
@@ -183,7 +183,7 @@
   },
   {
     "name": "Italy",
-    "code": "ITA",
+    "code": "IT",
     "continent": "Europe",
     "assoc": {
       "key": "ita",
@@ -196,7 +196,7 @@
   },
   {
     "name": "Netherlands",
-    "code": "NLD",
+    "code": "NL",
     "continent": "Europe",
     "assoc": {
       "key": "bon",
@@ -209,7 +209,7 @@
   },
   {
     "name": "Portugal",
-    "code": "PRT",
+    "code": "PT",
     "continent": "Europe",
     "assoc": {
       "key": "por",
@@ -222,7 +222,7 @@
   },
   {
     "name": "Switzerland",
-    "code": "CHE",
+    "code": "CH",
     "continent": "Europe",
     "assoc": {
       "key": "sui",
@@ -235,7 +235,7 @@
   },
   {
     "name": "Croatia",
-    "code": "HRV",
+    "code": "HR",
     "continent": "Europe",
     "assoc": {
       "key": "cro",
@@ -248,7 +248,7 @@
   },
   {
     "name": "Russia",
-    "code": "RUS",
+    "code": "RU",
     "continent": "Europe",
     "assoc": {
       "key": "rus",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Bosnia-Herzegovina",
-    "code": "BIH",
+    "code": "BA",
     "continent": "Europe",
     "assoc": {
       "key": "bih",
@@ -274,12 +274,12 @@
   },
   {
     "name": "England",
-    "code": "GBR",
+    "code": "GB",
     "continent": "Europe"
   },
   {
     "name": "Iran",
-    "code": "IRN",
+    "code": "IR",
     "continent": "Middle East",
     "assoc": {
       "key": "irn",
@@ -292,7 +292,7 @@
   },
   {
     "name": "Mexico",
-    "code": "MEX",
+    "code": "MX",
     "continent": "North America",
     "assoc": {
       "key": "mex",
@@ -305,7 +305,7 @@
   },
   {
     "name": "United States",
-    "code": "USA",
+    "code": "US",
     "continent": "North America",
     "assoc": {
       "key": "usa",
@@ -318,7 +318,7 @@
   },
   {
     "name": "Australia",
-    "code": "AUS",
+    "code": "AU",
     "continent": "Pacific",
     "assoc": {
       "key": "aus",
@@ -331,7 +331,7 @@
   },
   {
     "name": "Argentina",
-    "code": "ARG",
+    "code": "AR",
     "continent": "South America",
     "assoc": {
       "key": "arg",
@@ -344,7 +344,7 @@
   },
   {
     "name": "Brazil",
-    "code": "BRA",
+    "code": "BR",
     "continent": "South America",
     "assoc": {
       "key": "bra",
@@ -357,7 +357,7 @@
   },
   {
     "name": "Chile",
-    "code": "CHL",
+    "code": "CL",
     "continent": "South America",
     "assoc": {
       "key": "chi",
@@ -370,7 +370,7 @@
   },
   {
     "name": "Uruguay",
-    "code": "URY",
+    "code": "UY",
     "continent": "South America",
     "assoc": {
       "key": "uru",
@@ -383,7 +383,7 @@
   },
   {
     "name": "Colombia",
-    "code": "COL",
+    "code": "CO",
     "continent": "South America",
     "assoc": {
       "key": "col",
@@ -396,7 +396,7 @@
   },
   {
     "name": "Ecuador",
-    "code": "ECU",
+    "code": "EC",
     "continent": "South America",
     "assoc": {
       "key": "ecu",
