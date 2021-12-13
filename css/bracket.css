@@ -85,11 +85,6 @@ html, body{
     transition: all ease .5s;
   }
 
-/* Hover effect */
-
-/* .bracket-level:hover{
-  width: 200%;
-} */
 
 .bracket-matchup{
   width: 90%;
@@ -144,7 +139,7 @@ html, body{
   text-align: center;
 }
 
-.bracket-score{
+/* .bracket-score{
   font-family: 'Open Sans', sans-serif;
   font-size: .75em;
   padding: .2em;
@@ -153,17 +148,17 @@ html, body{
   overflow: hidden;
   color: #2B2B2B;
   text-align: center;
-}
+} */
 
-.winner>.bracket-name, .winner>.bracket-score{
+.winner>.bracket-name, .loser>.bracket-name{
   font-weight: bold;
-  color: #D07030;
+  color: #000000;
 }
 
-/* Hoover effects */
+Hoover effects */
 
-/* .bracket-team:hover{
-  background-color: #E8E8E8;
+.bracket-team:hover{
+  background-color: #000000;
   height: 100%;
   transition: all ease .5s;
 }
@@ -176,7 +171,3 @@ html, body{
   align-self: center;
   width: 100%;
 }
-
-.bracket-team:hover>.bracket-score{
-  display: none;
-} */
