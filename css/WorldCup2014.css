@@ -3,9 +3,9 @@ body {
     background: #41d9ff8a;
 }
 
-.nav-pills>li.active>a{
+.nav-pills>li.active>a {
     background-color: #3390ce !important;
-   }
+}
 
 .nav-pills>li.active {
     position: absolute;
@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-.logo-image{
+.logo-image {
     width: 60px;
     height: 60px;
     overflow: hidden;
@@ -43,12 +43,11 @@ body {
 #winnerFlag {
     width: 60px;
     height: 60px;
-
 }
 
 #winnerPicture {
     width: auto;
-    height: auto;    
+    height: auto;
 }
 
 #countryFlag {

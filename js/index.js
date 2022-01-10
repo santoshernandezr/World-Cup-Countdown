@@ -1,11 +1,11 @@
 countries = [];
 
 $('#clock-c').countdown("2022/11/21", function(event) {
-    var $this = $(this).html(event.strftime(''
-    + '<span class="h1 font-weight-bold">%D</span> Day%!d'
-    + '<span class="h1 font-weight-bold">%H</span> Hr'
-    + '<span class="h1 font-weight-bold">%M</span> Min'
-    + '<span class="h1 font-weight-bold">%S</span> Sec'));
+    var $this = $(this).html(event.strftime('' +
+        '<span class="h1 font-weight-bold">%D</span> Day%!d' +
+        '<span class="h1 font-weight-bold">%H</span> Hr' +
+        '<span class="h1 font-weight-bold">%M</span> Min' +
+        '<span class="h1 font-weight-bold">%S</span> Sec'));
 });
 
 const url = 'https://restcountries.com/v3.1/all';
@@ -23,22 +23,21 @@ dropdown.prop('selectedIndex', 0);
  * name in a list of list as so [[code, country], [],...,[]]. Then we iterate through this list to populate
  * the dropdown, we use the 2 country code as the value and the country name for the text.
  */
-$.getJSON(url, function (data) {
-  $.each(data, function (key, entry) {
-    // entry.name.common - country name
-    // entry.cca2 - country code
-    countries.push([entry.name.common, entry.cca2]);
-  })
+$.getJSON(url, function(data) {
+    $.each(data, function(key, entry) {
+        // entry.name.common - country name
+        // entry.cca2 - country code
+        countries.push([entry.name.common, entry.cca2]);
+    })
 
-  // sorting the list by alphabetical order
-  countries.sort()
+    // sorting the list by alphabetical order
+    countries.sort()
 
-  $.each(countries, function(index, country) {
-    // country[0] - country name
-    // country[1] - country code
-    dropdown.append($('<option></option>').attr('value', country[1]).text(country[0]));
-  }
-  )
+    $.each(countries, function(index, country) {
+        // country[0] - country name
+        // country[1] - country code
+        dropdown.append($('<option></option>').attr('value', country[1]).text(country[0]));
+    })
 });
 
 /**

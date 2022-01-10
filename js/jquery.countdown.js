@@ -22,21 +22,24 @@
 (function(factory) {
     "use strict";
     if (typeof define === "function" && define.amd) {
-        define([ "jquery" ], factory);
+        define(["jquery"], factory);
     } else {
         factory(jQuery);
     }
 })(function($) {
     "use strict";
-    var instances = [], matchers = [], defaultOptions = {
-        precision: 100,
-        elapse: false,
-        defer: false
-    };
+    var instances = [],
+        matchers = [],
+        defaultOptions = {
+            precision: 100,
+            elapse: false,
+            defer: false
+        };
     matchers.push(/^[0-9]*$/.source);
     matchers.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
     matchers.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
     matchers = new RegExp(matchers.join("|"));
+
     function parseDateString(dateString) {
         if (dateString instanceof Date) {
             return dateString;
@@ -68,16 +71,22 @@
         N: "totalMinutes",
         T: "totalSeconds"
     };
+
     function escapedRegExp(str) {
         var sanitize = str.toString().replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
         return new RegExp(sanitize);
     }
+
     function strftime(offsetObject) {
         return function(format) {
             var directives = format.match(/%(-|!)?[A-Z]{1}(:[^;]+;)?/gi);
             if (directives) {
                 for (var i = 0, len = directives.length; i < len; ++i) {
-                    var directive = directives[i].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/), regexp = escapedRegExp(directive[0]), modifier = directive[1] || "", plural = directive[3] || "", value = null;
+                    var directive = directives[i].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/),
+                        regexp = escapedRegExp(directive[0]),
+                        modifier = directive[1] || "",
+                        plural = directive[3] || "",
+                        value = null;
                     directive = directive[2];
                     if (DIRECTIVE_KEY_MAP.hasOwnProperty(directive)) {
                         value = DIRECTIVE_KEY_MAP[directive];
@@ -100,8 +109,10 @@
             return format;
         };
     }
+
     function pluralize(format, count) {
-        var plural = "s", singular = "";
+        var plural = "s",
+            singular = "";
         if (format) {
             format = format.replace(/(:|;|\s)/gi, "").split(/\,/);
             if (format.length === 1) {
@@ -182,7 +193,9 @@
                 this.remove();
                 return;
             }
-            var hasEventsAttached = $._data(this.el, "events") !== undefined, now = new Date(), newTotalSecsLeft;
+            var hasEventsAttached = $._data(this.el, "events") !== undefined,
+                now = new Date(),
+                newTotalSecsLeft;
             newTotalSecsLeft = this.finalDate.getTime() - now.getTime();
             newTotalSecsLeft = Math.ceil(newTotalSecsLeft / 1e3);
             newTotalSecsLeft = !this.options.elapse && newTotalSecsLeft < 0 ? 0 : Math.abs(newTotalSecsLeft);
@@ -229,7 +242,8 @@
         return this.each(function() {
             var instanceNumber = $(this).data("countdown-instance");
             if (instanceNumber !== undefined) {
-                var instance = instances[instanceNumber], method = argumentsArray[0];
+                var instance = instances[instanceNumber],
+                    method = argumentsArray[0];
                 if (Countdown.prototype.hasOwnProperty(method)) {
                     instance[method].apply(instance, argumentsArray.slice(1));
                 } else if (String(method).match(/^[$A-Z_][0-9A-Z_$]*$/i) === null) {

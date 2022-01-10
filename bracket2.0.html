@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Styling -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/bracket.css">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script>
-          function getWinner(winner, nextWinner) {
+    <!-- Styling -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bracket.css">
+
+    <script>
+        function getWinner(winner, nextWinner) {
             var team = document.getElementById(winner).textContent;
             document.getElementById(nextWinner).innerHTML = team;
-          }
-        </script>
+        }
+    </script>
 
-        <title>Brazil 2014</title> 
-    </head>
-    <body> 
-        <div class="container py-5">
-            <!-- Menu -->
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="bracket.html">Bracket</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">World Cups </a>
-                  <ul class="dropdown-menu">
+    <title>Brazil 2014</title>
+</head>
+
+<body>
+    <div class="container py-5">
+        <!-- Menu -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="bracket.html">Bracket</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">World Cups </a>
+                <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="WorldCup2014.html">Brazil 2014</a></li>
                     <li><a class="dropdown-item" href="WorldCup2018.html">Russia 2018</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-            </ul>
-        </div> 
+                </ul>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+        </ul>
+    </div>
 
-        <div class="header"><h1>Build your own Qatar 2022 World Cup Bracket. <br> Coming Soon!</h1></div>
-        <div class="bracket-container">
+    <div class="header">
+        <h1>Build your own Qatar 2022 World Cup Bracket. <br> Coming Soon!</h1>
+    </div>
+    <div class="bracket-container">
         <div class="group-level">
             <div class="group">
                 <div class="group-team">
@@ -98,144 +102,151 @@
                 </div>
             </div>
         </div>
-          <div class="bracket-level">
+        <div class="bracket-level">
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div id="round1Winner1" class="bracket-name"></div>
-              </div>
-              <div class="bracket-team loser">
-                <div id="round1Winner1" class="bracket-name"></div>
-              </div>
+                <div class="bracket-team winner">
+                    <div id="round1Winner1" class="bracket-name"></div>
+                </div>
+                <div class="bracket-team loser">
+                    <div id="round1Winner1" class="bracket-name"></div>
+                </div>
             </div>
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div id="round1Winner2" class="bracket-name"></div>
-              </div>
-              <div class="bracket-team loser">
-                <div id="round1Winner2" class="bracket-name"></div>
-              </div>
+                <div class="bracket-team winner">
+                    <div id="round1Winner2" class="bracket-name"></div>
+                </div>
+                <div class="bracket-team loser">
+                    <div id="round1Winner2" class="bracket-name"></div>
+                </div>
             </div>
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name">Nigeria</div>
-              </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name">France</div>
-              </div>
+                <div class="bracket-team winner">
+                    <div class="bracket-name">Nigeria</div>
+                </div>
+                <div class="bracket-team loser">
+                    <div class="bracket-name">France</div>
+                </div>
             </div>
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name">Algeria</div>
-              </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name">Germany</div>
-              </div>
+                <div class="bracket-team winner">
+                    <div class="bracket-name">Algeria</div>
+                </div>
+                <div class="bracket-team loser">
+                    <div class="bracket-name">Germany</div>
+                </div>
             </div>
-          </div>
-          <div class="bracket-level">
+        </div>
+        <div class="bracket-level">
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name">Brazil</div>
-              </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name">Colombia</div>
-              </div>
-            </div>
-            <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name">France</div>
-              </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name">Germany</div>
-              </div>
-            </div>
-          </div>
-          <div class="bracket-level">
-            <div class="bracket-matchup">
-              <div class="bracket-team">
-                <div class="bracket-name">Brazil</div>
-              </div>
-              <div class="bracket-team">
-                <div class="bracket-name">Germany</div>
-              </div>
-            </div>
-          </div>
-          <div class="bracket-level">
-            <div class="bracket-matchup">
-              <div class="bracket-team">
-                <div class="bracket-name">Germany</div>
-                
-              </div>
-              <div class="bracket-team">
-                <div class="bracket-name">Argentina</div>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="bracket-level">
-            <div class="bracket-matchup">
-              <div class="bracket-team loser">
-                <div class="bracket-name"">3</div><div class="bracket-name">Netherlands</div>
-              </div>
-              <div class="bracket-team winner">
-                <div class="bracket-name"">35</div><div class="bracket-name">Argentina</div>
-              </div>
-            </div>
-          </div>
-          <div class="bracket-level">
-            <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name"">34</div><div class="bracket-name">Netherlands</div>
-              </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name"">31</div><div class="bracket-name">Costa Rica</div>
-              </div>
+                <div class="bracket-team winner">
+                    <div class="bracket-name">Brazil</div>
+                </div>
+                <div class="bracket-team loser">
+                    <div class="bracket-name">Colombia</div>
+                </div>
             </div>
             <div class="bracket-matchup">
-              <div class="bracket-team loser">
-                <div class="bracket-name"">32</div><div class="bracket-name">Argentina</div>
-              </div>
-              <div class="bracket-team winner">
-                <div class="bracket-name"">39</div><div class="bracket-name">Belgium</div>
-              </div>
+                <div class="bracket-team winner">
+                    <div class="bracket-name">France</div>
+                </div>
+                <div class="bracket-team loser">
+                    <div class="bracket-name">Germany</div>
+                </div>
             </div>
-          </div>
-          <div class="bracket-level">
+        </div>
+        <div class="bracket-level">
             <div class="bracket-matchup">
-              <div class="bracket-team loser">
-                <div class="bracket-name"">26</div><div class="bracket-name">Mexico</div>
+                <div class="bracket-team">
+                    <div class="bracket-name">Brazil</div>
+                </div>
+                <div class="bracket-team">
+                    <div class="bracket-name">Germany</div>
+                </div>
+            </div>
+        </div>
+        <div class="bracket-level">
+            <div class="bracket-matchup">
+                <div class="bracket-team">
+                    <div class="bracket-name">Germany</div>
+
+                </div>
+                <div class="bracket-team">
+                    <div class="bracket-name">Argentina</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bracket-level">
+            <div class="bracket-matchup">
+                <div class="bracket-team loser">
+                    <div class="bracket-name" ">3</div><div class="bracket-name ">Netherlands</div>
               </div>
-              <div class="bracket-team winner">
-                <div class="bracket-name"">37</div><div class="bracket-name">Netherlands</div>
+              <div class="bracket-team winner ">
+                <div class="bracket-name "">35</div>
+                    <div class="bracket-name">Argentina</div>
+                </div>
+            </div>
+        </div>
+        <div class="bracket-level">
+            <div class="bracket-matchup">
+                <div class="bracket-team winner">
+                    <div class="bracket-name" ">34</div><div class="bracket-name ">Netherlands</div>
               </div>
+              <div class="bracket-team loser ">
+                <div class="bracket-name "">31</div>
+                    <div class="bracket-name">Costa Rica</div>
+                </div>
             </div>
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name"">29</div><div class="bracket-name">Greece</div>
+                <div class="bracket-team loser">
+                    <div class="bracket-name" ">32</div><div class="bracket-name ">Argentina</div>
               </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name"">22</div><div class="bracket-name">Costa Rica</div>
+              <div class="bracket-team winner ">
+                <div class="bracket-name "">39</div>
+                    <div class="bracket-name">Belgium</div>
+                </div>
+            </div>
+        </div>
+        <div class="bracket-level">
+            <div class="bracket-matchup">
+                <div class="bracket-team loser">
+                    <div class="bracket-name" ">26</div><div class="bracket-name ">Mexico</div>
               </div>
+              <div class="bracket-team winner ">
+                <div class="bracket-name "">37</div>
+                    <div class="bracket-name">Netherlands</div>
+                </div>
             </div>
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name"">36</div><div class="bracket-name">Switzerland</div>
+                <div class="bracket-team winner">
+                    <div class="bracket-name" ">29</div><div class="bracket-name ">Greece</div>
               </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name""15></div><div class="bracket-name">Argentina</div>
-              </div>
+              <div class="bracket-team loser ">
+                <div class="bracket-name "">22</div>
+                    <div class="bracket-name">Costa Rica</div>
+                </div>
             </div>
             <div class="bracket-matchup">
-              <div class="bracket-team winner">
-                <div class="bracket-name"">27</div><div class="bracket-name">USA</div>
+                <div class="bracket-team winner">
+                    <div class="bracket-name" ">36</div><div class="bracket-name ">Switzerland</div>
               </div>
-              <div class="bracket-team loser">
-                <div class="bracket-name"">24</div><div class="bracket-name">Belgium</div>
-              </div>
+              <div class="bracket-team loser ">
+                <div class="bracket-name ""15></div>
+                    <div class="bracket-name">Argentina</div>
+                </div>
             </div>
-          </div>
-          <div class="group-level">
+            <div class="bracket-matchup">
+                <div class="bracket-team winner">
+                    <div class="bracket-name" ">27</div><div class="bracket-name ">USA</div>
+              </div>
+              <div class="bracket-team loser ">
+                <div class="bracket-name "">24</div>
+                    <div class="bracket-name">Belgium</div>
+                </div>
+            </div>
+        </div>
+        <div class="group-level">
             <div class="group">
                 <div class="group-team">
                     <div class="bracket-name">Spain</div>
@@ -293,12 +304,13 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
-        <!-- JQuery -->
-        <script src="js/jquery.js"></script> 
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.countdown.js"></script>   
-        <script src="js/bracket.js"></script> 
-    </body>
+    <!-- JQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/bracket.js"></script>
+</body>
+
 </html>

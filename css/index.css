@@ -41,6 +41,7 @@
 * ==================================================
 *
 */
+
 body {
     min-height: 100vh;
     background: #41d9ff8a;
@@ -79,9 +80,9 @@ body {
     margin: 0 auto;
 }
 
-.nav-pills>li.active>a{
+.nav-pills>li.active>a {
     background-color: #3390ce !important;
-   }
+}
 
 .nav-pills>li.active {
     position: absolute;
