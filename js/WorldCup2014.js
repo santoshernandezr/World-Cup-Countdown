@@ -50,7 +50,7 @@ function makeCells(array, newRoww) {
 
 /**
  * This function takes in an empty list that will be populated with teams. These teams are in this
- * group. It will make a list of a group.
+ * group. It will then make a list of a group.
  * @param {List} group - The group which the respective team is in.
  * @param {JSON} teams - This is a JSON object which contains the teams in the group.
  */
