@@ -139,18 +139,6 @@ body {
     text-align: center;
 }
 
-
-/* .bracket-score{
-  font-family: 'Open Sans', sans-serif;
-  font-size: .75em;
-  padding: .2em;
-  line-height: 1.5em;
-  white-space: nowrap;
-  overflow: hidden;
-  color: #2B2B2B;
-  text-align: center;
-} */
-
 .winner>.bracket-name,
 .loser>.bracket-name {
     font-weight: bold;
