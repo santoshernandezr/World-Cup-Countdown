@@ -12,12 +12,19 @@ function getWinner(currentRound, nextRound, bracketSide) {
     // Checking if we're in the round of 16
     if (currentRound.includes("group")) {
         winnerNumber = nextRound.charAt(nextRound.length - 1);
+        document.getElementById("winner").innerHTML = " ";
         clearSemiFinalAndFinal(bracketSide, winnerNumber);
     }
 
     // Checking if we're in the quarter finals
     if (currentRound.includes("roundOf16")) {
+        document.getElementById("winner").innerHTML = " ";
         clearFinal(bracketSide);
+    }
+
+    // Checking if we're in the semi-finals
+    if (currentRound.includes("quarterFinal")) {
+        document.getElementById("winner").innerHTML = " ";
     }
 
     var team = document.getElementById(currentRound).textContent;
@@ -50,4 +57,14 @@ function clearSemiFinalAndFinal(bracketSide, winner) {
 function clearFinal(bracketSide) {
     // This will clear the text int he final slot
     document.getElementById(bracketSide + "-semiFinalWinner1").innerHTML = " ";
+}
+
+/**
+ * This function will make the winner show up in the bracket.html page in the center of the bracket.
+ * TODO: We could add the flag to the side of the country.
+ * @param {String} winner - The id of the winner 
+ */
+function worldCupWinner(winner) {
+    team = document.getElementById(winner).innerHTML;
+    document.getElementById("winner").innerHTML = "Winner: " + team;
 }

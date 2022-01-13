@@ -159,3 +159,12 @@ Hoover effects */ .bracket-team:hover {
     align-self: center;
     width: 100%;
 }
+
+.winner>h3 {
+    position: relative;
+    top: 180%;
+}
+
+.winner>#winner {
+    text-align: center;
+}

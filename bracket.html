@@ -35,6 +35,8 @@
     <div class="header">
         <h1>Build your own Qatar 2022 World Cup Bracket!</h1>
     </div>
+
+
     <div class="bracket-container">
         <!-- Round of 16 -->
         <div class="bracket-level">
@@ -106,13 +108,18 @@
 
         <!-- Final -->
         <div class="bracket-level">
+            <!-- This is where the winner will pop up -->
+            <div class="winner">
+                <h3 id="winner"></h3>
+            </div>
+
             <div class="bracket-matchup">
                 <div class="bracket-team winner">
-                    <div id="left-semiFinalWinner1" class="bracket-name"></div>
+                    <div id="left-semiFinalWinner1" onclick="worldCupWinner('left-semiFinalWinner1')" class="bracket-name"></div>
                 </div>
 
                 <div class="bracket-team loser">
-                    <div id="right-semiFinalWinner1" class="bracket-name"></div>
+                    <div id="right-semiFinalWinner1" onclick="worldCupWinner('right-semiFinalWinner1')" class="bracket-name"></div>
                 </div>
             </div>
         </div>
