@@ -66,5 +66,9 @@ function clearFinal(bracketSide) {
  */
 function worldCupWinner(winner) {
     team = document.getElementById(winner).innerHTML;
-    document.getElementById("winner").innerHTML = "Winner: " + team;
+    if (team == "") {
+        document.getElementById("winner").innerHTML = " ";
+    } else {
+        document.getElementById("winner").innerHTML = "Winner: " + team;
+    }
 }
