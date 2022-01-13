@@ -8,13 +8,14 @@
  * @param {String} bracketSide - This will indicate what side of the bracket we are on
  */
 function getWinner(currentRound, nextRound, bracketSide) {
+
     // Checking if we're in the round of 16
     if (currentRound.includes("group")) {
         winnerNumber = nextRound.charAt(nextRound.length - 1);
         clearSemiFinalAndFinal(bracketSide, winnerNumber);
     }
 
-    // Checking if we're int the quarter finals
+    // Checking if we're in the quarter finals
     if (currentRound.includes("roundOf16")) {
         clearFinal(bracketSide);
     }

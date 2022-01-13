@@ -9,7 +9,7 @@
     <!-- Styling -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bracket.css">
-    <title>Brazil 2014</title>
+    <title>Bracket</title>
 </head>
 
 <body>
@@ -36,6 +36,7 @@
         <h1>Build your own Qatar 2022 World Cup Bracket!</h1>
     </div>
     <div class="bracket-container">
+        <!-- Round of 16 -->
         <div class="bracket-level">
             <div class="bracket-matchup">
                 <div class="bracket-team winner">
@@ -70,6 +71,8 @@
                 </div>
             </div>
         </div>
+
+        <!--Quarter Finals -->
         <div class="bracket-level">
             <div class="bracket-matchup">
                 <div class="bracket-team winner">
@@ -88,6 +91,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Semi-Finals -->
         <div class="bracket-level">
             <div class="bracket-matchup">
                 <div class="bracket-team winner">
@@ -98,6 +103,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Final -->
         <div class="bracket-level">
             <div class="bracket-matchup">
                 <div class="bracket-team winner">
@@ -110,34 +117,40 @@
             </div>
         </div>
 
+        <!-- Semi-Finals -->
         <div class="bracket-level">
             <div class="bracket-matchup">
                 <div class="bracket-team loser">
-                    <div id="right-quarterFinalWinner1" onclick="getWinner('right-quarterFinalWinner1','right-semiFinalWinner1')" class="bracket-name" "></div>
-              </div>
-              <div class="bracket-team winner ">
-                <div id="right-quarterFinalWinner2 " onclick="getWinner( 'right-quarterFinalWinner2', 'right-semiFinalWinner1') " class="bracket-name ""></div>
+                    <div id="right-quarterFinalWinner1" onclick="getWinner('right-quarterFinalWinner1','right-semiFinalWinner1')" class="bracket-name"></div>
+                </div>
+                <div class="bracket-team winner">
+                    <div id="right-quarterFinalWinner2" onclick="getWinner('right-quarterFinalWinner2','right-semiFinalWinner1')" class="bracket-name"></div>
                 </div>
             </div>
         </div>
+
+        <!--Quarter Finals -->
         <div class="bracket-level">
             <div class="bracket-matchup">
                 <div class="bracket-team winner">
-                    <div id="right-roundOf16Winner1" onclick="getWinner('right-roundOf16Winner1','right-quarterFinalWinner1', 'right')" class="bracket-name" "></div>
-              </div>
-              <div class="bracket-team loser ">
-                <div id="right-roundOf16Winner2 " onclick="getWinner( 'right-roundOf16Winner2', 'right-quarterFinalWinner1', 'right') " class="bracket-name ""></div>
+                    <div id="right-roundOf16Winner1" onclick="getWinner('right-roundOf16Winner1','right-quarterFinalWinner1', 'right')" class="bracket-name"></div>
+                </div>
+                <div class="bracket-team loser">
+                    <div id="right-roundOf16Winner2" onclick="getWinner('right-roundOf16Winner2','right-quarterFinalWinner1', 'right')" class="bracket-name"></div>
                 </div>
             </div>
+
             <div class="bracket-matchup">
+                <div class="bracket-team winner">
+                    <div id="right-roundOf16Winner3" onclick="getWinner('right-roundOf16Winner3','right-quarterFinalWinner2', 'right')" class="bracket-name"></div>
+                </div>
                 <div class="bracket-team loser">
-                    <div id="right-roundOf16Winner3" onclick="getWinner('right-roundOf16Winner3','right-quarterFinalWinner2', 'right')" class="bracket-name" "></div>
-              </div>
-              <div class="bracket-team winner ">
-                <div id="right-roundOf16Winner4 " onclick="getWinner( 'right-roundOf16Winner4', 'right-quarterFinalWinner2', 'right') " class="bracket-name ""></div>
+                    <div id="right-roundOf16Winner4" onclick="getWinner('right-roundOf16Winner4','right-quarterFinalWinner2', 'right')" class="bracket-name"></div>
                 </div>
             </div>
         </div>
+
+        <!-- Round of 16 -->
         <div class="bracket-level">
             <div class="bracket-matchup">
                 <div class="bracket-team loser">
@@ -156,19 +169,19 @@
                 </div>
             </div>
             <div class="bracket-matchup">
-                <div class="bracket-team winner">
-                    <div id="groupF1stPlace" onclick="getWinner('groupF1stPlace','right-roundOf16Winner3', 'right')" class="bracket-name">Switzerland</div>
-                </div>
                 <div class="bracket-team loser">
-                    <div id="groupE2ndPlace" onclick="getWinner('groupE2ndPlace','right-roundOf16Winner3', 'right')" class="bracket-name">Argentina</div>
+                    <div id="groupF1stPlace" onclick="getWinner('groupF1stPlace','right-roundOf16Winner3', 'right')" class="bracket-name">Swisscheese</div>
+                </div>
+                <div class="bracket-team winner">
+                    <div id="groupE2ndPlace" onclick="getWinner('groupE2ndPlace','right-roundOf16Winner3', 'right')" class="bracket-name">nalgaland</div>
                 </div>
             </div>
             <div class="bracket-matchup">
                 <div class="bracket-team winner">
-                    <div id="groupH1stPlace" onclick="getWinner('groupH1stPlace','right-roundOf16Winner4', 'right')" class="bracket-name">USA</div>
+                    <div id="groupH1stPlace" onclick="getWinner('groupH1stPlace','right-roundOf16Winner4', 'right')" class="bracket-name">usa</div>
                 </div>
                 <div class="bracket-team loser">
-                    <div id="groupG2ndPlace" onclick="getWinner('groupG2ndPlace','right-roundOf16Winner4', 'right')" class="bracket-name">Belgium</div>
+                    <div id="groupG2ndPlace" onclick="getWinner('groupG2ndPlace','right-roundOf16Winner4', 'right')" class="bracket-name"> Belgium</div>
                 </div>
             </div>
         </div>
