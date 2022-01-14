@@ -160,11 +160,8 @@ Hoover effects */ .bracket-team:hover {
     width: 100%;
 }
 
-.winner>h3 {
+#winner {
     position: relative;
-    top: 180%;
-}
-
-.winner>#winner {
+    top: 20%;
     text-align: center;
 }
