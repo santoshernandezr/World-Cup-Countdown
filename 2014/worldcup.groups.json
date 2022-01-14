@@ -1,170 +1,161 @@
-[
-  {
-    "name": "Group A",
-    "teams": [
-      {
-        "name": "Cameroon",
-        "code": "CM"
-      },
-      {
-        "name": "Croatia",
-        "code": "HR"
-      },
-      {
-        "name": "Mexico",
-        "code": "MX"
-      },
-      {
-        "name": "Brazil",
-        "code": "BR"
-      }
-    ]
-  },
-  {
-    "name": "Group B",
-    "teams": [
-      {
-        "name": "Spain",
-        "code": "ES"
-      },
-      {
-        "name": "Netherlands",
-        "code": "NL"
-      },
-      {
-        "name": "Australia",
-        "code": "AU"
-      },
-      {
-        "name": "Chile",
-        "code": "CL"
-      }
-    ]
-  },
-  {
-    "name": "Group C",
-    "teams": [
-      {
-        "name": "Côte d'Ivoire",
-        "code": "CI"
-      },
-      {
-        "name": "Japan",
-        "code": "JP"
-      },
-      {
-        "name": "Greece",
-        "code": "GR"
-      },
-      {
-        "name": "Colombia",
-        "code": "CO"
-      }
-    ]
-  },
-  {
-    "name": "Group D",
-    "teams": [
-      {
-        "name": "Costa Rica",
-        "code": "CI"
-      },
-      {
-        "name": "Italy",
-        "code": "IT"
-      },
-      {
-        "name": "England",
-        "code": "GB"
-      },
-      {
-        "name": "Uruguay",
-        "code": "UY"
-      }
-    ]
-  },
-  {
-    "name": "Group E",
-    "teams": [
-      {
-        "name": "Honduras",
-        "code": "HN"
-      },
-      {
-        "name": "France",
-        "code": "FR"
-      },
-      {
-        "name": "Switzerland",
-        "code": "CH"
-      },
-      {
-        "name": "Ecuador",
-        "code": "EC"
-      }
-    ]
-  },
-  {
-    "name": "Group F",
-    "teams": [
-      {
-        "name": "Nigeria",
-        "code": "NG"
-      },
-      {
-        "name": "Bosnia-Herzegovina",
-        "code": "BA"
-      },
-      {
-        "name": "Iran",
-        "code": "IR"
-      },
-      {
-        "name": "Argentina",
-        "code": "AR"
-      }
-    ]
-  },
-  {
-    "name": "Group G",
-    "teams": [
-      {
-        "name": "Ghana",
-        "code": "GH"
-      },
-      {
-        "name": "Germany",
-        "code": "DE"
-      },
-      {
-        "name": "Portugal",
-        "code": "PT"
-      },
-      {
-        "name": "United States",
-        "code": "US"
-      }
-    ]
-  },
-  {
-    "name": "Group H",
-    "teams": [
-      {
-        "name": "Algeria",
-        "code": "DZ"
-      },
-      {
-        "name": "South Korea",
-        "code": "KR"
-      },
-      {
-        "name": "Belgium",
-        "code": "BE"
-      },
-      {
-        "name": "Russia",
-        "code": "RU"
-      }
-    ]
-  }
+[{
+        "name": "Group A",
+        "teams": [{
+                "name": "Cameroon",
+                "code": "CM"
+            },
+            {
+                "name": "Croatia",
+                "code": "HR"
+            },
+            {
+                "name": "Mexico",
+                "code": "MX"
+            },
+            {
+                "name": "Brazil",
+                "code": "BR"
+            }
+        ]
+    },
+    {
+        "name": "Group B",
+        "teams": [{
+                "name": "Spain",
+                "code": "ES"
+            },
+            {
+                "name": "Netherlands",
+                "code": "NL"
+            },
+            {
+                "name": "Australia",
+                "code": "AU"
+            },
+            {
+                "name": "Chile",
+                "code": "CL"
+            }
+        ]
+    },
+    {
+        "name": "Group C",
+        "teams": [{
+                "name": "Côte d'Ivoire",
+                "code": "CI"
+            },
+            {
+                "name": "Japan",
+                "code": "JP"
+            },
+            {
+                "name": "Greece",
+                "code": "GR"
+            },
+            {
+                "name": "Colombia",
+                "code": "CO"
+            }
+        ]
+    },
+    {
+        "name": "Group D",
+        "teams": [{
+                "name": "Costa Rica",
+                "code": "CI"
+            },
+            {
+                "name": "Italy",
+                "code": "IT"
+            },
+            {
+                "name": "England",
+                "code": "GB"
+            },
+            {
+                "name": "Uruguay",
+                "code": "UY"
+            }
+        ]
+    },
+    {
+        "name": "Group E",
+        "teams": [{
+                "name": "Honduras",
+                "code": "HN"
+            },
+            {
+                "name": "France",
+                "code": "FR"
+            },
+            {
+                "name": "Switzerland",
+                "code": "CH"
+            },
+            {
+                "name": "Ecuador",
+                "code": "EC"
+            }
+        ]
+    },
+    {
+        "name": "Group F",
+        "teams": [{
+                "name": "Nigeria",
+                "code": "NG"
+            },
+            {
+                "name": "Bosnia-Herzegovina",
+                "code": "BA"
+            },
+            {
+                "name": "Iran",
+                "code": "IR"
+            },
+            {
+                "name": "Argentina",
+                "code": "AR"
+            }
+        ]
+    },
+    {
+        "name": "Group G",
+        "teams": [{
+                "name": "Ghana",
+                "code": "GH"
+            },
+            {
+                "name": "Germany",
+                "code": "DE"
+            },
+            {
+                "name": "Portugal",
+                "code": "PT"
+            },
+            {
+                "name": "United States",
+                "code": "US"
+            }
+        ]
+    },
+    {
+        "name": "Group H",
+        "teams": [{
+                "name": "Algeria",
+                "code": "DZ"
+            },
+            {
+                "name": "South Korea",
+                "code": "KR"
+            },
+            {
+                "name": "Belgium",
+                "code": "BE"
+            },
+            {
+                "name": "Russia",
+                "code": "RU"
+            }
+        ]
+    }
 ]

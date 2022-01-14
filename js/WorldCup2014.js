@@ -30,7 +30,7 @@ var groupH = [];
  * @param {List} newRoww - The cell we are dealing with.
  */
 function makeCells(array, newRoww) {
-    array.forEach(function (item, index) {
+    array.forEach(function(item, index) {
         var newCell = newRoww.insertCell();
         if (item.length != 0) {
             var newText = document.createTextNode(item[0]);
@@ -50,12 +50,12 @@ function makeCells(array, newRoww) {
 
 /**
  * This function takes in an empty list that will be populated with teams. These teams are in this
- * group. It will make a list of a group.
+ * group. It will then make a list of a group.
  * @param {List} group - The group which the respective team is in.
  * @param {JSON} teams - This is a JSON object which contains the teams in the group.
  */
- function makeGroup(group, teams) {
-    teams.forEach(function (item) {
+function makeGroup(group, teams) {
+    teams.forEach(function(item) {
         group.push(item["name"]);
         group.push(item["code"]);
     });
@@ -83,7 +83,7 @@ function insertToList(continent, name, code) {
 function makeTable(items, elementID, elementTagName) {
     while (items[0].length != 0 || items[1].length != 0 || items[2].length != 0 || items[3].length != 0 || items[4].length != 0 || items[5].length != 0 || items[6].length != 0 || items[7].length != 0) {
         var tbodyRef = document.getElementById(elementID).getElementsByTagName(elementTagName)[0];
-        var newRow = tbodyRef.insertRow(); 
+        var newRow = tbodyRef.insertRow();
         makeCells(items, newRow)
     }
 
@@ -93,7 +93,7 @@ function makeTable(items, elementID, elementTagName) {
  * This getJSON will iterate through '2014/worldcup.teams.json' and seperate the teams into their 
  * corresponding continent. 
  */
-$.getJSON(teams, function (data) {
+$.getJSON(teams, function(data) {
     $.each(data, function(key, entry) {
         if (entry.continent == "Africa") {
             insertToList(africa, entry.name, entry.code)
@@ -121,9 +121,9 @@ $.getJSON(teams, function (data) {
  * This function will iterate through '2014/worldcup.groups.json' and put the teams in their
  * corresponding group.
  */
-$.getJSON(groups, function (data) {
+$.getJSON(groups, function(data) {
     $.each(data, function(key, entry) {
-        if (entry.name == "Group A") {      
+        if (entry.name == "Group A") {
             makeGroup(groupA, entry.teams)
         } else if (entry.name == "Group B") {
             makeGroup(groupB, entry.teams)
@@ -139,16 +139,16 @@ $.getJSON(groups, function (data) {
             makeGroup(groupG, entry.teams)
         } else if (entry.name == "Group H") {
             makeGroup(groupH, entry.teams)
-        } 
+        }
     })
 
     var groups = [groupA, groupB, groupC, groupD, groupE, groupF, groupG, groupH];
     makeTable(groups, 'groupTable', 'tbody');
 });
 
-$.getJSON(stadiums, function (data) {
+$.getJSON(stadiums, function(data) {
     var i;
-    for (i = 0; i < 12; i ++) {
+    for (i = 0; i < 12; i++) {
         let grid = $('#stadium' + i.toString());
         grid.append($('<h4></h4>').text(data[i]["name"]));
         grid.append('<img src="pictures/stadiums/' + data[i]["key"] + '.jpg" class="img-fluid">');
