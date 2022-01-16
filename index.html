@@ -48,7 +48,8 @@
 
                         <!-- Body of the Log in modal-->
                         <div class="modal-body">
-                            <!-- This form is for the user to log in-->
+
+                            <!-- This form is for the user to log in -->
                             <form action="/my-handling-form-page" method="post">
                                 <input type="hidden" name="_token" actioin="">
 
@@ -79,6 +80,7 @@
                                     </div>
                                 </div>
 
+                                <!-- This is the login button -->
                                 <div class="form-group">
                                     <div>
                                         <button type="submit" class="btn btn-success">Login</button>
@@ -112,11 +114,52 @@
                         </div>
                         <div class="modal-body">
 
+                            <!-- Sign up form -->
+                            <form role="form" method="POST" action="">
+                                <input type="hidden" name="_token" value="">
 
+                                <!-- Input for the username -->
+                                <div class="form-group">
+                                    <label class="control-label">Username</label>
+                                    <div>
+                                        <input type="text" class="form-control input-lg" name="name" value="">
+                                    </div>
+                                </div>
+
+                                <!-- Input for the email -->
+                                <div class="form-group">
+                                    <label class="control-label">E-Mail Address</label>
+                                    <div>
+                                        <input type="email" class="form-control input-lg" name="email" value="">
+                                    </div>
+                                </div>
+
+                                <!-- Input for the password -->
+                                <div class="form-group">
+                                    <label class="control-label">Password</label>
+                                    <div>
+                                        <input type="password" class="form-control input-lg" name="password" value="">
+                                    </div>
+                                </div>
+
+                                <!-- Input for password confirmation -->
+                                <div class="form-group">
+                                    <label class="control-label">Confirm Password</label>
+                                    <div>
+                                        <input type="password" class="form-control input-lg" name="pasword_confirmatioin" value="">
+                                    </div>
+                                </div>
+
+                                <!-- Button to submit the sign up information -->
+                                <div class="form-group">
+                                    <div>
+                                        <button id="signUpSubmitBtn" type="submit" class="btn btn-success">Register</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                         <!-- This is the footer of the modal -->
-                        <div class="modal-footer">
-                            Don't </div>
+                        <div class="modal-footer"> </div>
                     </div>
                 </div>
             </div>
