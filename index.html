@@ -27,27 +27,121 @@
                     <li><a class="dropdown-item" href="WorldCup2018.html">Russia 2018</a></li>
                 </ul>
             </li>
-        </ul>
 
-        <!-- Header with the world cups -->
-        <header class="text-center">
-            <h1 class="display-4 mb-4">Qatar 2022 Countdown</h1>
-        </header>
+            <!-- Trigger/Open The Modal -->
+            <button data-toggle="modal" href="#myModal" class="btn btn-primary" id="myBtn">Sign in</button>
 
-        <!-- Countdown Timer -->
-        <div class="py-5">
-            <div class="row">
-                <div class="col-lg-8 m-auto">
-                    <div class="rounded bg-gradient-4 text-white shadow p-5 text-center mb-5">
-                        <p class="mb-0 font-weight-bold text-uppercase">Let's get ready for the worlds most beautiful tournament!!</p>
-                        <div id="clock-c" class="countdown py-4"></div>
+            <!-- This is the Log in modal  -->
+            <div class="modal" id="myModal">
+
+                <!-- Log in modal content -->
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <!-- The header of the Log in modal-->
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <div class="myHeader">
+                                <h3>Log in to Qatar 2022</h3>
+                            </div>
+                        </div>
+
+                        <!-- Body of the Log in modal-->
+                        <div class="modal-body">
+                            <!-- This form is for the user to log in-->
+                            <form action="/my-handling-form-page" method="post">
+                                <input type="hidden" name="_token" actioin="">
+
+                                <!-- input for the email address of the user -->
+                                <div class="form-group">
+                                    <label class="control-label">Email:</label>
+                                    <div>
+                                        <input type="email" class="form-control input-sm" name="email" value="">
+                                    </div>
+                                </div>
+
+                                <!-- Input for the password of the user -->
+                                <div class="form-group">
+                                    <label class="control-label">Password</label>
+                                    <div>
+                                        <input type="password" class="form-control input-sm" name="password">
+                                    </div>
+                                </div>
+
+                                <!-- Checkbox for us to remember the user -->
+                                <div class="form-group">
+                                    <div>
+                                        <div class="checkbox">
+                                            <label>
+                                            <input type="checkbox" name="remember me"> Remember Me
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div>
+                                        <button type="submit" class="btn btn-success">Login</button>
+                                        <!-- TODO - This a tag will redirect the user to where they can get their password back -->
+                                        <!-- <a class="btn btn-link" href="">Forgot your password?</a> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- This is the footer of the Log in modal -->
+                        <div class="modal-footer">
+                            Don't have an account?
+                            <button data-toggle="modal" href="#SignUpModal" class="btn btn-primary" id="myBtn2">Sign up</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Dropdown Menu with the countries -->
-        <select id="locality-dropdown" name="locality">
+            <!-- This is the Sign In modal -->
+            <div class="modal" id="myModal2">
+
+                <!-- Sign in modal content -->
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <div class="myHeader">
+                                <h3>Sign up to Qatar 2022</h3>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+
+
+                        </div>
+                        <!-- This is the footer of the modal -->
+                        <div class="modal-footer">
+                            Don't </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <!-- Header with the world cups -->
+    <header class="text-center">
+        <h1 class="display-4 mb-4">Qatar 2022 Countdown</h1>
+    </header>
+
+    <!-- Countdown Timer -->
+    <div class="py-5">
+        <div class="row">
+            <div class="col-lg-8 m-auto">
+                <div class="rounded bg-gradient-4 text-white shadow p-5 text-center mb-5">
+                    <p class="mb-0 font-weight-bold text-uppercase">Let's get ready for the worlds most beautiful tournament!!</p>
+                    <div id="clock-c" class="countdown py-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu with the countries -->
+    <select id="locality-dropdown" name="locality">
                 <option></option>
             </select>
     </div>

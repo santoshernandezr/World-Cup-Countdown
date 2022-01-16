@@ -50,3 +50,56 @@ document.querySelector('#locality-dropdown').addEventListener("change", function
     document.body.style.backgroundSize = "100% 100%"
     console.log("I have been changed", this.value.toLowerCase());
 });
+
+/**
+ * This block of code will get the login modal
+ */
+// Get the modal
+var logInModal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    logInModal.style.display = "block";
+
+    window.onclick = function(event) {
+        if (event.target == logInModal) {
+            logInModal.style.display = "none";
+        }
+    }
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    logInModal.style.display = "none";
+}
+
+/**
+ * This block of code will get the sign up modal
+ */
+var signUpModal = document.getElementById("myModal2");
+var btn2 = document.getElementById('myBtn2');
+
+var span2 = document.getElementsByClassName("close")[1];
+
+// When the user clicks on the button, open the modal
+btn2.onclick = function() {
+    logInModal.style.display = "none"
+    signUpModal.style.display = "block";
+
+    window.onclick = function(event) {
+        if (event.target == signUpModal) {
+            signUpModal.style.display = "none";
+        }
+    }
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    signUpModal.style.display = "none"
+}
