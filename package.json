@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "server": "webpack-dashboard -- webpack-dev-server --inline --port808",
+        "dev": "nodemon server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.2",
+        "mongoose": "^6.1.7"
+    }
+}
