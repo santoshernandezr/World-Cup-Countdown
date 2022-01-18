@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = 5501;
 
 // getting-started.js
 const mongoose = require('mongoose');
@@ -16,12 +16,26 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function() {
     console.log("Succesfully connected");
-})
+});
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/index.html");
+});
+
+let options = {
+    dotfiles: "ignore", // allow, deny, ignore
+    etag: true,
+    extensions: ["htm", "html"],
+    index: false,
+    maxAge: "7d",
+    redirect: false,
+    setHeaders: function(res, path, stat) {
+        res.set("x-timestamp", Date.now());
+    }
+}
+
+app.use(express.static("public", options));
 
 app.listen(port, function() {
     console.log('Server is running on port ' + port);
-})
-
-app.get("/homepage", (req, res) => {
-    res.send("yay")
 })
