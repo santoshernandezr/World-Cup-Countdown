@@ -19,8 +19,7 @@ router.post('/insert', function(req, res, next) {
     };
 
     mongo.connect(url, function(err, db) {
-        assert.equal(null, err);
-        db.collection('Users').insertOne(item, function(err, result) {
+        db.collection('usermodels').insertOne(item, function(err, result) {
             assert.equal(null, err);
             console.log('Item inserted');
             db.close();
