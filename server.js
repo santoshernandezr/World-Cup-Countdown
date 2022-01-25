@@ -73,9 +73,22 @@ app.use('/img', express.static(__dirname + 'public/img'));
 
 // This post will add a user 
 app.post('/index', [check('name', 'Username cannot be empty!').exists().isLength({ min: 3 }),
-        check('email').isEmail().normalizeEmail(),
-        check('password', 'Password must contain at least 8 characters').exists().isLength({ min: 8 }),
-        check('password_confirmation', 'Password does not match').exists().isLength({ min: 8 })
+        check('email')
+        .isEmail()
+        .normalizeEmail(),
+        check('password', 'Password must contain at least 8 characters')
+        .exists()
+        .isLength({ min: 8 })
+        .custom((val, { req, loc, path }) => {
+            if (val != req.body.password_confirmation) {
+                throw new Error("Password does not match.");
+            } else {
+                return validationResult;
+            }
+        }),
+        check('password_confirmation', 'Password does not match')
+        .exists()
+        .isLength({ min: 8 })
     ],
     function(req, res, next) {
         var errors = validationResult(req)
