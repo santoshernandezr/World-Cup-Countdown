@@ -58,13 +58,13 @@ document.querySelector('#locality-dropdown').addEventListener("change", function
 var logInModal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var signInBtn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var signInSpan = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+signInBtn.onclick = function() {
     logInModal.style.display = "block";
 
     window.onclick = function(event) {
@@ -75,7 +75,7 @@ btn.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+signInspan.onclick = function() {
     logInModal.style.display = "none";
 }
 
@@ -83,12 +83,11 @@ span.onclick = function() {
  * This block of code will get the sign up modal
  */
 var signUpModal = document.getElementById("myModal2");
-var btn2 = document.getElementById('myBtn2');
-
-var span2 = document.getElementsByClassName("close")[1];
+var signUpBtn = document.getElementById('myBtn2');
+var signUpSpan = document.getElementsByClassName("close")[1];
 
 // When the user clicks on the button, open the modal
-btn2.onclick = function() {
+signUpBtn.onclick = function() {
     logInModal.style.display = "none"
     signUpModal.style.display = "block";
 
@@ -100,6 +99,6 @@ btn2.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span2.onclick = function() {
+signUpSpan.onclick = function() {
     signUpModal.style.display = "none"
 }
