@@ -61,7 +61,7 @@ var logInModal = document.getElementById("myModal");
 var signInBtn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var signInSpan = document.getElementsByClassName("close")[0];
+var Span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 signInBtn.onclick = function() {
@@ -75,8 +75,9 @@ signInBtn.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-signInspan.onclick = function() {
+Span.onclick = function() {
     logInModal.style.display = "none";
+    console.log("I am changing");
 }
 
 /**
