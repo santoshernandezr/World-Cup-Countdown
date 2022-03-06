@@ -1,9 +1,8 @@
-// imports
-// const index = require('./routes/index');
 const mongoose = require('mongoose');
 const express = require("express");
 const path = require('path');
 const { check, validationResult } = require('express-validator');
+const users = require('./models/users');
 
 const app = express();
 const port = 5501;
@@ -71,8 +70,20 @@ app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 
+// This post will allow the user to sign in
+app.post('/signIn', [check('email').isEmail().normalizeEmail(),
+        check('password', 'Password must contain at least 8 characters')
+        .exists()
+        .isLength({ min: 8 })
+    ],
+    function(req, res, next) {
+        console.log("Signed in");
+        res.redirect('/');
+    }
+);
+
 // This post will add a user 
-app.post('/index', [check('name', 'Username cannot be empty!').exists().isLength({ min: 3 }),
+app.post('/signUp', [check('name', 'Username cannot be empty!').exists().isLength({ min: 3 }),
         check('email')
         .isEmail()
         .normalizeEmail(),
@@ -104,7 +115,7 @@ app.post('/index', [check('name', 'Username cannot be empty!').exists().isLength
                 password_confirmation: req.body.password_confirmation
             };
 
-            db.collection("usermodels").insertOne(user, function(err, result) {
+            db.collection("users").insertOne(user, function(err, result) {
                 console.log("item inserted");
                 db.close();
             });

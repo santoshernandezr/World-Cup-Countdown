@@ -1,18 +1,22 @@
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.Schema({
-    name: {
-        type: String,
-    },
-    email: {
-        type: String,
-    },
-    password: {
-        type: String,
-    },
-    password_confirmation: {
-        type: String,
-    },
+let userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+    password_confirmation: String
 });
 
-module.exports = mongoose.model("userModel", userSchema);
+let User = mongoose.model('User', userSchema);
+
+var findUser = function(email_inputed) {
+    User.find({ email: email_inputed }, (error, data) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log(data);
+        }
+    });
+}
+
+module.exports = mongoose.model("users", userSchema);
