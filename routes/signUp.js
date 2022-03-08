@@ -43,11 +43,11 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
     ],
     function(req, res, next) {
         var errors = validationResult(req);
-        var userAdded = null;
+        const alert = errors.array();
+        // var userAdded = null;
 
         if (!errors.isEmpty()) {
-            const alert = errors.array();
-            res.render('index', { alert, userAdded });
+            res.render('index', { alert });
         } else {
             var user = {
                 name: req.body.name,
@@ -61,9 +61,10 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
                 db.close();
             });
 
-            const userAdded = USER_ADDED;
+            // const userAdded = USER_ADDED;
 
-            res.render('index', { userAdded });
+            // res.render('index', { userAdded });
+            res.redirect('/');
         }
     });
 
