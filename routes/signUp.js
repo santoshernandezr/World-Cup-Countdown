@@ -8,8 +8,6 @@ const signUpRouter = express.Router();
 const { check, validationResult } = require('express-validator');
 const bodyParser = require("body-parser");
 
-var USER_ADDED = "You account has been successfully made!";
-
 signUpRouter.use(bodyParser.urlencoded({ extended: true }));
 signUpRouter.use(express.json());
 
@@ -44,10 +42,14 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
     function(req, res, next) {
         var errors = validationResult(req);
         const alert = errors.array();
-        // var userAdded = null;
 
+        // if the validator caught some errors then this will render the new page and send
+        // an array of the errors it caught. It will then go through a for loop to put each
+        // of the errors in their own alert for the user to see. 
         if (!errors.isEmpty()) {
             res.render('index', { alert });
+            // If there are no errors then we will get the user input and send that to the database
+            // and create an instance of users for the user (i.e. create them an account).
         } else {
             var user = {
                 name: req.body.name,
@@ -61,11 +63,9 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
                 db.close();
             });
 
-            // const userAdded = USER_ADDED;
-
-            // res.render('index', { userAdded });
             res.redirect('/');
         }
+
     });
 
 module.exports = signUpRouter;

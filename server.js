@@ -1,15 +1,16 @@
+// Require statements
 const mongoose = require('mongoose');
 const express = require("express");
-const { check, validationResult } = require('express-validator');
 const urlRouter = require('./routes/index');
 const signUpRouter = require('./routes/signUp');
-// const path = require('path');
-// const users = require('./models/users');
+
+const { check, validationResult } = require('express-validator');
 
 const app = express();
 const port = 5501;
 const bodyParser = require("body-parser");
 
+// Use statements
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/', urlRouter);
