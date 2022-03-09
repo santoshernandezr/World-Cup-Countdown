@@ -42,6 +42,7 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
     function(req, res, next) {
         var errors = validationResult(req);
         const alert = errors.array();
+        var userAdded = false;
 
         // if the validator caught some errors then this will render the new page and send
         // an array of the errors it caught. It will then go through a for loop to put each
@@ -51,6 +52,8 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
             // If there are no errors then we will get the user input and send that to the database
             // and create an instance of users for the user (i.e. create them an account).
         } else {
+            userAdded = true;
+            console.log("This is the length of the alert: " + alert.length);
             var user = {
                 name: req.body.name,
                 email: req.body.email,
@@ -63,7 +66,8 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
                 db.close();
             });
 
-            res.redirect('/');
+            res.render('index', { userAdded });
+
         }
 
     });
