@@ -1,15 +1,12 @@
 // Require statements
-const mongoose = require('mongoose');
 const express = require("express");
 const urlRouter = require('./routes/index');
 const signUpRouter = require('./routes/signUp');
 const signInRouter = require('./routes/signIn');
-
-const { check, validationResult } = require('express-validator');
+const bodyParser = require("body-parser");
 
 const app = express();
 const port = 5501;
-const bodyParser = require("body-parser");
 
 // Use statements
 app.use(bodyParser.urlencoded({ extended: true }));
