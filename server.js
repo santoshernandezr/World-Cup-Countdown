@@ -19,25 +19,10 @@ app.use('/signUp', signUpRouter);
 app.use('/signIn', signInRouter);
 app.set('view engine', 'ejs');
 
-
-// This is what gets us connected to the mongoDB: futbolcluster
-mongoose.connect('mongodb+srv://me:1206825Rs!!!@futbolcluster.k7r86.mongodb.net/FutbolCluster?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-
-// This checks to make sure we have a good connection
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error'));
-db.once('open', function() {
-    console.log("Succesfully connected");
-});
-
 // This will be for the homepage
 app.get("/", (req, res) => {
     res.render('index');
 });
-
 
 let options = {
     dotfiles: "ignore", // allow, deny, ignore
