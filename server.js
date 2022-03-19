@@ -57,18 +57,6 @@ app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 
-// This post will allow the user to sign in
-// app.post('/signIn', [check('email').isEmail().normalizeEmail(),
-//         check('password', 'Password must contain at least 8 characters')
-//         .exists()
-//         .isLength({ min: 8 })
-//     ],
-//     function(req, res, next) {
-//         console.log("Signed in");
-//         res.redirect('/');
-//     }
-// );
-
 app.listen(port, function() {
     console.log('Server is running on port ' + port);
 })

@@ -38,12 +38,20 @@ signInRouter.post('/', [check('email').isEmail().normalizeEmail(),
             assert.equal(null, err);
 
             var cursor = db.collection("users").find();
+
+            // Iterate through all the users in the database
             cursor.forEach(function(doc, err) {
                 assert.equal(null, err);
+
+                // Check to see if the email and password match
                 if (doc.email == user.email && doc.password == user.password) {
                     console.log("You have successfully signed in");
+
+                    // Check if the email or password is incorrect 
                 } else if ((doc.email == user.email && doc.password != user.password) || (doc.email != user.email && doc.password == user.password)) {
                     console.log("You're email or password are incorrect");
+
+                    // Email does not match any existing item 
                 } else {
                     console.log("No user exists for this email");
                 }

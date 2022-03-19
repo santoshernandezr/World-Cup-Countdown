@@ -7,18 +7,18 @@ const express = require("express");
 const signUpRouter = express.Router();
 const { check, validationResult } = require('express-validator');
 const bodyParser = require("body-parser");
+const assert = require('assert');
 
 signUpRouter.use(bodyParser.urlencoded({ extended: true }));
 signUpRouter.use(express.json());
 
+const url = 'mongodb+srv://me:1206825Rs!!!@futbolcluster.k7r86.mongodb.net/FutbolCluster?retryWrites=true&w=majority';
+
 // This is what gets us connected to the mongoDB: futbolcluster
-mongoose.connect('mongodb+srv://me:1206825Rs!!!@futbolcluster.k7r86.mongodb.net/FutbolCluster?retryWrites=true&w=majority', {
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
-
-// This checks to make sure we have a good connection
-const db = mongoose.connection;
 
 // This post will add a user 
 signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLength({ min: 3 }),
@@ -41,8 +41,8 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
     ],
     function(req, res, next) {
         var errors = validationResult(req);
-        const alert = errors.array();
-        var userAdded = false;
+        var alert = errors.array();
+        var userAdded = true;
 
         // if the validator caught some errors then this will render the new page and send
         // an array of the errors it caught. It will then go through a for loop to put each
@@ -52,8 +52,7 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
             // If there are no errors then we will get the user input and send that to the database
             // and create an instance of users for the user (i.e. create them an account).
         } else {
-            userAdded = true;
-            console.log("This is the length of the alert: " + alert.length);
+            // Pass in the name, email, password, and password confirmation passed in by the user in an array
             var user = {
                 name: req.body.name,
                 email: req.body.email,
@@ -61,16 +60,33 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
                 password_confirmation: req.body.password_confirmation
             };
 
-            console.log("This is my email: " + user.email);
+            mongoose.connect(url, function(err, db) {
+                assert.equal(null, err);
 
-            db.collection("users").insertOne(user, function(err, result) {
-                console.log("item inserted");
-                db.close();
+                var cursor = db.collection("users").find();
+
+                cursor.forEach(function(doc, err) {
+                    assert.equal(null, err);
+
+                    // If the email is in the database then we set userAdded to false because we won't be adding a user
+                    if (doc.email == user.email) {
+                        console.log("DOC: " + doc.email + " " + "USER: " + user.email);
+                        console.log("There is an existing account with this email");
+                        userAdded = false;
+                    }
+                }, function() {
+                    // If the email doesn't exist in the databse then we add a user to the database
+                    if (userAdded) {
+                        console.log("User will be added");
+                        db.collection("users").insertOne(user, function(err, result) {
+                            console.log("item inserted");
+                            db.close();
+                        });
+                    }
+                    res.render('index', { userAdded });
+                });
             });
-
-            res.render('index', { userAdded });
         }
-
     });
 
 module.exports = signUpRouter;
