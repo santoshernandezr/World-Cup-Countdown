@@ -61,13 +61,14 @@ signUpRouter.post('/', [check('name', 'Username cannot be empty!').exists().isLe
                 password_confirmation: req.body.password_confirmation
             };
 
+            console.log("This is my email: " + user.email);
+
             db.collection("users").insertOne(user, function(err, result) {
                 console.log("item inserted");
                 db.close();
             });
 
             res.render('index', { userAdded });
-
         }
 
     });
