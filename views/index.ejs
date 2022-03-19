@@ -17,172 +17,192 @@
 <body>
     <div class="container py-5">
 
-        <!-- This are the alerts that will be created with the alert array that will come in -->
+        <!-- These are the alerts that will be created with the alert array that will come in -->
         <% if(typeof alert != 'undefined') { %>
+
+            <!-- This for loop will loop through the messages -->
             <% alert.forEach(function(error) { %>
+
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <%= error.msg %>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                     </button>
                 </div>
                 <% }) %>
-                    <% } %>
 
-                        <!-- Menu -->
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="bracket">Bracket</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">World Cups </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="WorldCup2014">Brazil 2014</a></li>
-                                    <li><a class="dropdown-item" href="WorldCup2018">Russia 2018</a></li>
-                                </ul>
-                            </li>
+                    <!-- This if statement will check if userAdded is defined or not-->
+                    <% } else if (typeof userAdded != 'undefined') { %>
 
-                            <!-- Trigger/Open The Modal -->
-                            <button data-toggle="modal" href="#myModal" class="btn btn-primary" id="myBtn">Sign in</button>
+                        <!-- user Added is defined and is true then we tell the user that his account has been succesfully made -->
+                        <% if (userAdded == true) { %>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                Your account has been succesfully made!
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                            </button>
+                            </div>
+                            <%} else { %>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    There is an existing account with this email
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                </button>
+                                </div>
+                                <% }} %>
 
-                            <!-- This is the Log in modal  -->
-                            <div class="modal" id="myModal">
+                                    <!-- Menu -->
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="bracket">Bracket</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">World Cups </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="WorldCup2014">Brazil 2014</a></li>
+                                                <li><a class="dropdown-item" href="WorldCup2018">Russia 2018</a></li>
+                                            </ul>
+                                        </li>
 
-                                <!-- Log in modal content -->
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
+                                        <!-- Trigger/Open The Modal -->
+                                        <button data-toggle="modal" href="#myModal" class="btn btn-primary" id="myBtn">Sign in</button>
 
-                                        <!-- The header of the Log in modal-->
-                                        <div class="modal-header">
-                                            <span class="close">&times;</span>
-                                            <div class="myHeader">
-                                                <h3>Log in to Qatar 2022</h3>
-                                            </div>
-                                        </div>
+                                        <!-- This is the Log in modal  -->
+                                        <div class="modal" id="myModal">
 
-                                        <!-- Body of the Log in modal-->
-                                        <div class="modal-body">
+                                            <!-- Log in modal content -->
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
 
-                                            <!-- This form is for the user to log in -->
-                                            <form action="/signIn" method="POST">
-                                                <input type="hidden" name="_token" actioin="">
-
-                                                <!-- input for the email address of the user -->
-                                                <div class="form-group">
-                                                    <label class="control-label">Email:</label>
-                                                    <div>
-                                                        <input type="email" class="form-control input-sm" name="email" value="">
-                                                    </div>
-                                                </div>
-
-                                                <!-- Input for the password of the user -->
-                                                <div class="form-group">
-                                                    <label class="control-label">Password</label>
-                                                    <div>
-                                                        <input type="password" class="form-control input-sm" name="password">
-                                                    </div>
-                                                </div>
-
-                                                <!-- Checkbox for us to remember the user -->
-                                                <div class="form-group">
-                                                    <div>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" name="remember me"> Remember Me
-                                                            </label>
+                                                    <!-- The header of the Log in modal-->
+                                                    <div class="modal-header">
+                                                        <span class="close">&times;</span>
+                                                        <div class="myHeader">
+                                                            <h3>Log in to Qatar 2022</h3>
                                                         </div>
                                                     </div>
-                                                </div>
 
-                                                <!-- This is the login button -->
-                                                <div class="form-group">
-                                                    <div>
-                                                        <button type="submit" class="btn btn-success">Login</button>
-                                                        <!-- TODO - This a tag will redirect the user to where they can get their password back -->
-                                                        <!-- <a class="btn btn-link" href="">Forgot your password?</a> -->
+                                                    <!-- Body of the Log in modal-->
+                                                    <div class="modal-body">
+
+                                                        <!-- This form is for the user to log in -->
+                                                        <form action="/signIn" method="POST">
+                                                            <input type="hidden" name="_token" actioin="">
+
+                                                            <!-- input for the email address of the user -->
+                                                            <div class="form-group">
+                                                                <label class="control-label">Email:</label>
+                                                                <div>
+                                                                    <input type="email" class="form-control input-sm" name="email" value="">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Input for the password of the user -->
+                                                            <div class="form-group">
+                                                                <label class="control-label">Password</label>
+                                                                <div>
+                                                                    <input type="password" class="form-control input-sm" name="password">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Checkbox for us to remember the user -->
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                <input type="checkbox" name="remember me"> Remember Me
+                                                            </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- This is the login button -->
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <button type="submit" class="btn btn-success">Login</button>
+                                                                    <!-- TODO - This a tag will redirect the user to where they can get their password back -->
+                                                                    <!-- <a class="btn btn-link" href="">Forgot your password?</a> -->
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                    <!-- This is the footer of the Log in modal -->
+                                                    <div class="modal-footer">
+                                                        Don't have an account?
+                                                        <button data-toggle="modal" href="#SignUpModal" class="btn btn-primary" id="myBtn2">Sign up</button>
                                                     </div>
                                                 </div>
-                                            </form>
-                                        </div>
-
-                                        <!-- This is the footer of the Log in modal -->
-                                        <div class="modal-footer">
-                                            Don't have an account?
-                                            <button data-toggle="modal" href="#SignUpModal" class="btn btn-primary" id="myBtn2">Sign up</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- This is the Sign In modal -->
-                            <div class="modal" id="myModal2">
-
-                                <!-- Sign in modal content -->
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <span class="close">&times;</span>
-                                            <div class="myHeader">
-                                                <h3>Sign up to Qatar 2022</h3>
                                             </div>
                                         </div>
 
-                                        <div class="modal-body">
+                                        <!-- This is the Sign In modal -->
+                                        <div class="modal" id="myModal2">
 
-                                            <!-- Sign up form -->
-                                            <form action="/signUp" role="form" method="POST">
-
-                                                <input type="hidden" name="_token" value="">
-
-                                                <!-- Input for the username -->
-                                                <div class="form-group">
-                                                    <label class="control-label">Username</label>
-                                                    <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="Username should at least contain 3 characters." />
-                                                    <div>
-                                                        <input id="name" type="text" class="form-control input-lg" name="name" value="">
+                                            <!-- Sign in modal content -->
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <span class="close">&times;</span>
+                                                        <div class="myHeader">
+                                                            <h3>Sign up to Qatar 2022</h3>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <!-- Input for the email -->
-                                                <div class="form-group">
-                                                    <label class="control-label">E-Mail Address</label>
-                                                    <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="This should be a valid email." />
-                                                    <div>
-                                                        <input type="email" class="form-control input-lg" name="email" value="">
-                                                    </div>
-                                                </div>
+                                                    <div class="modal-body">
 
-                                                <!-- Input for the password -->
-                                                <div class="form-group">
-                                                    <label class="control-label">Password</label>
-                                                    <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="Password must be at least 8 characters long." />
-                                                    <div>
-                                                        <input type="password" class="form-control input-lg" name="password" value="">
-                                                    </div>
-                                                </div>
+                                                        <!-- Sign up form -->
+                                                        <form action="/signUp" role="form" method="POST">
 
-                                                <!-- Input for password confirmation -->
-                                                <div class="form-group">
-                                                    <label class="control-label">Confirm Password</label>
-                                                    <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="This password should match the password above." />
-                                                    <div>
-                                                        <input type="password" class="form-control input-lg" name="password_confirmation" value="">
-                                                    </div>
-                                                </div>
+                                                            <input type="hidden" name="_token" value="">
 
-                                                <!-- Button to submit the sign up information -->
-                                                <div class="form-group">
-                                                    <div>
-                                                        <button id="signUpSubmitBtn" type="submit" class="btn btn-success">Register</button>
+                                                            <!-- Input for the username -->
+                                                            <div class="form-group">
+                                                                <label class="control-label">Username</label>
+                                                                <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="Username should at least contain 3 characters." />
+                                                                <div>
+                                                                    <input id="name" type="text" class="form-control input-lg" name="name" value="">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Input for the email -->
+                                                            <div class="form-group">
+                                                                <label class="control-label">E-Mail Address</label>
+                                                                <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="This should be a valid email." />
+                                                                <div>
+                                                                    <input type="email" class="form-control input-lg" name="email" value="">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Input for the password -->
+                                                            <div class="form-group">
+                                                                <label class="control-label">Password</label>
+                                                                <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="Password must be at least 8 characters long." />
+                                                                <div>
+                                                                    <input type="password" class="form-control input-lg" name="password" value="">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Input for password confirmation -->
+                                                            <div class="form-group">
+                                                                <label class="control-label">Confirm Password</label>
+                                                                <img src="https://img.icons8.com/bubbles/15/000000/question-mark.png" title="This password should match the password above." />
+                                                                <div>
+                                                                    <input type="password" class="form-control input-lg" name="password_confirmation" value="">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Button to submit the sign up information -->
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <button id="signUpSubmitBtn" type="submit" class="btn btn-success">Register</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
                                                     </div>
+                                                    <!-- This is the footer of the modal -->
+                                                    <div class="modal-footer"> </div>
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                        <!-- This is the footer of the modal -->
-                                        <div class="modal-footer"> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ul>
+                                    </ul>
     </div>
 
     <!-- Header with the world cups -->
